@@ -24,21 +24,6 @@ function gutenberg_alt_text_gutenberg_editor_assets() {
 }
 
 /**
- * Implements hook_library_info_alter().
- */
-function gutenberg_alt_text_library_info_alter(&$libraries, $extension) {
-  if ($extension === 'gutenberg') {
-    $config = \Drupal::config('gutenberg_alt_text.settings');
-    
-    // Only add dependency if enabled and compatible
-    if ($config->get('enabled') && gutenberg_alt_text_is_compatible()) {
-      $libraries['editor']['dependencies'][] = 'gutenberg_alt_text/alt_text_enhancement';
-      \Drupal::logger('gutenberg_alt_text')->info('Added Gutenberg Alt Text as dependency to Gutenberg editor');
-    }
-  }
-}
-
-/**
  * Check if our enhancements are compatible with current Gutenberg version.
  */
 function gutenberg_alt_text_is_compatible() {
