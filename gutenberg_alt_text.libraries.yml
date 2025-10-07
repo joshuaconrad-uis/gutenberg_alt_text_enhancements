@@ -1,0 +1,7 @@
+alt_text_enhancement:
+  version: 1.x
+  js:
+    js/alt_text_enhancement.js: {}
+  dependencies:
+    - gutenberg/edit-node
+    - core/drupal

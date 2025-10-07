@@ -1,0 +1,7 @@
+name: 'Gutenberg Alt Text Enhancement'
+type: module
+description: 'Adds alt text support to Cover and Gallery blocks with update-resistant implementation'
+core_version_requirement: ^9 || ^10
+dependencies:
+  - gutenberg
+package: 'Gutenberg'
